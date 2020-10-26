@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="../js/register.js"></script>
+</head>
+<body>
+<main>
+    <img src="../assets/logo.svg" alt="Logo">
+    <h2>
+        Crie sua conta.
+    </h2>
+    <form onsubmit="handleSubmit();">
+        <label for="fname">Nome Completo</label>
+        <input type="text" autocomplete="name" id="fname" required>
+        <label for="fusername">Usuário</label>
+        <input type="text" autocomplete="username" id="fusername" required>
+        <label for="fpasswd">Senha</label>
+        <input type="password" autocomplete="current-password" id="fpasswd" required>
+        <button type="submit">
+            Cadastrar-se
+        </button>
+    </form>
+    <hr>
+    <span>
+        <a href="login.html">Voltar</a>
+    </span>
+</main>
+</body>
+</html>

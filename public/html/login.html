@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="../js/login.js"></script>
+</head>
+<body>
+<main>
+    <img src="../assets/logo.svg" alt="Logo">
+    <h2>
+        Acesse sua conta
+    </h2>
+    <form onsubmit="login();">
+        <label for="flusername">Usuário</label>
+        <input type="text" autocomplete="username" required id="flusername">
+        <label for="flpasswd">Senha</label>
+        <input type="password" autocomplete="current-password" id="flpasswd" required>
+        <button type="submit">
+            Entrar
+        </button>
+    </form>
+    <hr>
+    <span>
+        <a href="register.html">Cadastrar-se.</a>
+        <a href="../index.html">Voltar à tela inicial</a>
+    </span>
+</main>
+</body>
+</html>

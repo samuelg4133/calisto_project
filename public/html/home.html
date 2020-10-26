@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calisto Free Market</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link href="../favicon.ico" rel="icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+<header>
+    <div id="nav-search">
+        <img src="../assets/logo.svg" alt="Calisto Free Market" onclick="updateScreen();">
+        <form class="nav-search" id="form-search">
+            <input type="text" class="nav-search-input" placeholder="Buscar Produtos ou Serviços">
+            <button id="search">
+                <img src="../assets/search-black.svg" alt="Search">
+            </button>
+        </form>
+    </div>
+    <div id="right-nav">
+        <button>
+            <a href="advertise.html">
+                Anuncie
+            </a>
+        </button>
+        <div id="avatar">
+            <a href="login.html">
+                <img src="../assets/perm_identity-24px.svg" alt="user">
+            </a>
+        </div>
+        <div class="items-column">
+            <div class="items" onclick="handleShowOptions();">
+                <img src="../assets/list.svg" alt="List">
+            </div>
+        </div>
+    </div>
+</header>
+<nav id="nav-options">
+    <div class="diamond">
+    </div>
+    <div class="div-nav-options">
+        <p>
+            <a href="my-business.html">
+            Meus Negócios
+            </a>
+        </p>
+    </div>
+    <div class="div-nav-options">
+        <p>
+            <a href="my-advertises.html">
+            Meus Anúncios
+            </a>
+        </p>
+    </div>
+</nav>
+<nav class="nav-menu">
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/directions_car-black.svg" alt="Auto">
+        </div>
+        <small>Automóveis</small>
+    </div>
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/house-black.svg" alt="House">
+        </div>
+        <small>Imóveis</small>
+    </div>
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/phone_iphone-black.svg" alt="Electros">
+        </div>
+        <small>Eletrônicos</small>
+    </div>
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/home_repair_service-black.svg" alt="Service">
+        </div>
+        <small>Serviços</small>
+    </div>
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/shirt.svg" alt="Clothes">
+        </div>
+        <small>Roupas e Acessórios</small>
+    </div>
+    <div class="items-column">
+        <div class="items">
+            <img src="../assets/list.svg" alt="List">
+        </div>
+        <small>Outros</small>
+    </div>
+</nav>
+<section>
+    <fieldset>
+        <legend>
+            <h2>Anúncios</h2>
+            <span>Selecione uma opção</span>
+        </legend>
+        <ul id="items-grid">
+            <li class="advertise">
+                <img src="../assets/ecosport.jpg" alt="Carro">
+                <hr>
+                <strong class="advertise-description">
+                    Ford Ecosport 2015 1.6 Freestyle
+                </strong>
+                <small class="advertise-price">
+                    R$ 34.000,00
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+            <li class="advertise">
+                <img src="../assets/corinthians.jpg" alt="Camisa Time de Futebol">
+                <hr>
+                <strong class="advertise-description">
+                    Camisa Corinthians II 2020/2021 Torcedor
+                </strong>
+                <small class="advertise-price">
+                    R$ 249,99
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+            <li class="advertise">
+                <img src="../assets/xboxseriess.jpeg" alt="Videogame">
+                <hr>
+                <strong class="advertise-description">
+                    Xbox Series S
+                </strong>
+                <small class="advertise-price">
+                    R$ 2.999,00
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+            <li class="advertise">
+                <img src="../assets/casa.jpg" alt="Casa">
+                <hr>
+                <strong class="advertise-description">
+                    Casa
+                </strong>
+                <small class="advertise-price">
+                    R$ 3.000.000,00
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+            <li class="advertise">
+                <img src="../assets/corolla.jpg" alt="Carro">
+                <hr>
+                <strong class="advertise-description">
+                    Toyota Corolla Style 2016
+                </strong>
+                <small class="advertise-price">
+                    R$ 74.000,00
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+            <li class="advertise">
+                <img src="../assets/darista.jpg" alt="Diarista">
+                <hr>
+                <strong class="advertise-description">
+                    Contrata-se Diarista
+                </strong>
+                <small class="advertise-price">
+                    R$ 1.500,00
+                </small>
+                <small class="advertise-contact">
+                    (38) 9 9924-8900
+                </small>
+            </li>
+        </ul>
+    </fieldset>
+</section>
+<footer>
+    <div class="social-media">
+        <h6>
+            Matenha-se Conectado conosco nas nossas redes sociais!
+        </h6>
+        <div class="links-grid">
+            <a href="https://www.facebook.com/profile.php?id=100008854217598" target="_blank">
+                <img src="../assets/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/samuel.gomesv/" target="_blank">
+                <img src="../assets/instagram.svg" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>
+            &#9400; 2020 Copyright: Samuel Gomes Vieira
+        </p>
+    </div>
+</footer>
+</body>
+</html>

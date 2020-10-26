@@ -1,0 +1,575 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body{
+    background: #f5f5fc;
+    color: #000;
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    border: none;
+}
+
+#page-landing{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5fc;
+    background-color: #8a8a8a;
+}
+
+img#logo-image{
+    width: 100%;
+}
+
+.logo-container{
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.logo-container h2{
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+#buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.2rem 0;
+}
+
+#buttons-container a{
+    width: 30rem;
+    height: 10.4rem;
+    border-radius: 0.8rem;
+    margin-right: 1.6rem;
+    font: 700 2.0rem Ubuntu;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    margin-right: 1.6rem;
+    transition: background-color 0.2s;
+}
+
+#buttons-container a img{
+    margin-right: 1.4rem;
+    width: 4rem;
+}
+
+#buttons-container a.tohome{
+    background: #ffcbdb;
+}
+
+
+#buttons-container a.tohome:hover{
+    background: #ff6f9f;
+}
+
+#total-connections{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#total-connections img{
+    margin-left: 0.8rem;
+}
+
+@media(min-width: 1100px){
+    #page-landing-content{
+        max-width: 1100px;
+
+        display: grid;
+        grid-template-rows: 350px 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "logo hero hero" "buttons buttons total";
+    }
+
+    .logo-container{
+        grid-area: logo;
+        align-self: center;
+        margin: 0;
+        text-align: left;
+    }
+
+    .logo-container h2{
+        text-align: initial;
+        font-size: 3.6rem;
+    }
+
+    img#logo-image{
+        grid-area: hero;
+        justify-self: end;
+    }
+
+   #buttons-container{
+        grid-area: buttons;
+        justify-content: flex-start;
+    }
+
+  #buttons-container a{
+        font-size: 2.4rem;
+    }
+
+    #total-connections{
+        grid-area: total;
+        justify-self: end;
+    }
+}
+
+select, option{
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.25rem;
+}
+
+button, input {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6f6f6f;
+    height: 6rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+header div#nav-search{
+    margin: 0 0.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header div#nav-search img{
+    cursor: pointer;
+}
+
+div#nav-search form.nav-search{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+div#nav-search form.nav-search button#search{
+    background-color: #f5f5fc;
+    width: 3rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+div#nav-search form.nav-search button#search:hover{
+    background-color: #ffcbdb;
+}
+
+div#nav-search form.nav-search button#search img{
+    width: 2.5rem;
+}
+
+div#nav-search form.nav-search input.nav-search-input{
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ccc;
+    height: 2.5rem;
+    width: 100%;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+
+div#right-nav{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div#right-nav button{
+    cursor: pointer;
+    margin-right: 1.5rem;
+    background-color: #ffcbdb;
+    height: 3rem;
+    width: 6rem;
+    border-radius: 3rem;
+}
+
+div#right-nav button:hover{
+    background-color: #ff6f9f;
+}
+
+div#right-nav div#avatar{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+div#right-nav div#avatar:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+div#right-nav div#avatar img{
+    width: 3rem;
+    border-radius: 50%;
+    border: 0.25rem solid #000000;
+}
+
+div#right-nav div.items-column div.items{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+div#right-nav div.items-column div.items:hover{
+    background-color: #cccccc;
+}
+
+nav#nav-options{
+    margin-top: -0.5rem;
+    margin-left: -10rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    height: 6rem;
+    background-color: #ffe8f8;
+    float: right;
+    position: relative;
+    padding: 0.5rem;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav#nav-options .div-nav-options:first-child{
+    margin: 1rem;
+}
+
+nav#nav-options .div-nav-options{
+    cursor: pointer;
+}
+
+nav#nav-options .div-nav-options:hover{
+    color: #ff6f9f;
+}
+
+nav#nav-options div.diamond{
+    position:relative;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    margin-top: -1rem;
+    background-color: #ffe8f8;
+}
+
+nav.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e5e5e5;
+    height: 6rem;
+    /*padding: 0 4rem;*/
+}
+
+nav.nav-menu div.items-column{
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav.nav-menu div.items-column:hover{
+    background-color: #ffe8f8;
+}
+
+nav.nav-menu div.items-column div.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #ffcbdb;
+}
+
+nav.nav-menu div.items-column div.items img{
+    width: 3rem;
+}
+
+section {
+    margin: 0.75rem auto;
+    padding: 3rem;
+    display: flex;
+    max-width: 70rem;
+    background: #fff;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+section h2 {
+    color: #ff6f9f;
+    font-size: 2rem;
+    font-family: Pacifico, cursive;
+}
+section fieldset {
+    margin-top: 0.5rem;
+    min-inline-size: auto;
+    border: 0;
+}
+
+section legend {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    #items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    #items-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+#items-grid li {
+    background: #f0f0f5;
+    border: 2px solid #f5f5f5;
+    height: 15rem;
+    border-radius: 0.5rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+#items-grid li hr{
+    margin: 0.5rem;
+    background-color: #cccccc;
+    height: 0.125rem;
+    width: 100%;
+}
+
+#items-grid li strong {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#items-grid li small{
+    font-size: 1rem;
+}
+
+#items-grid li small.advertise-contact{
+    font-size: 1.125rem;
+    color: #ff6f9f;
+}
+
+#items-grid li img {
+    height: 12rem;
+}
+
+footer{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+footer .social-media{
+    padding: 1rem 4rem;
+    background: #8a8a8a;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .social-media h6{
+    margin: 0 1rem;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+footer .social-media .links-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+footer .social-media .links-grid a{
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-media div.links-grid a img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.footer-copyright{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #6f6f6f;
+}
+
+.footer-copyright p{
+    color: #fff;
+}
+
+main{
+    margin: 5rem auto;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30rem;
+    background: #fff;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+main h2{
+    margin: 0.75rem 0;
+}
+
+main form input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ffcbdb;
+    margin: 0.5rem 0;
+}
+
+main form label{
+    margin: 1rem;
+    font-weight: 700;
+}
+
+main form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: #ff6f9f;
+    cursor: pointer;
+}
+
+main form button:hover{
+    background-color: #ffcbdb;
+}
+
+main form select {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    height: 3.125rem;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ffcbdb;
+    margin: 0.5rem 0;
+}
+
+main hr{
+    margin: 0.5rem;
+    background-color: #cccccc;
+    width: 100%;
+}
+
+main span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main span a+a{
+    margin-top: 0.5rem;
+}
+
+

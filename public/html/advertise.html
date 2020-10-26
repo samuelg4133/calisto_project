@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Anuncie</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+<header>
+    <div id="nav-search">
+        <a href="../index.html">
+        <img src="../assets/logo.svg" alt="Calisto Free Market">
+        </a>
+        <form class="nav-search" id="form-search">
+            <input type="text" class="nav-search-input" placeholder="Buscar Produtos ou Serviços">
+            <button id="search">
+                <img src="../assets/search-black.svg" alt="Search">
+            </button>
+        </form>
+    </div>
+    <div id="right-nav">
+        <div id="avatar">
+            <a href="login.html">
+                <img src="../assets/perm_identity-24px.svg" alt="user">
+            </a>
+        </div>
+    </div>
+</header>
+<main>
+
+    <h2>
+        Insera os Dados
+    </h2>
+    <form id="fadvertise" onsubmit="handleSubmit();">
+        <label for="fsalesman">Vendedor:</label>
+        <input type="text" id="fsalesman">
+        <label for="ftype">Tipo: </label>
+        <select id="ftype">
+            <option value="auto">
+                Automóveis
+            </option>
+            <option value="house">
+                Imóveis
+            </option>
+            <option value="electr">
+                Eletrônicos
+            </option>
+            <option value="service">
+                Serviços
+            </option>
+            <option value="clothes">
+                Roupas e Acessórios
+            </option>
+            <option value="outher">
+                Outros
+            </option>
+        </select>
+        <label for="fdescription">Descrição: </label>
+        <input type="text" id="fdescription">
+        <label for="fvalue">Valor (R$): </label>
+        <input type="value" id="fvalue">
+        <label for="whatsapp">Contato: </label>
+        <input type="text" id="whatsapp">
+        <label for="url-photo">URL da Foto: </label>
+        <input type="url" id="url-photo">
+        <button id="button-advertise">
+            Salvar
+        </button>
+    </form>
+</main>
+
+</body>
+</html>
